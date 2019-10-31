@@ -21,6 +21,9 @@ header {
     }
 
     &-toggler {
+      background-color: transparent;
+      border-width: 0;
+
       @include media-breakpoint-up(lg) {
         display: none;
       }
