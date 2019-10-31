@@ -1,0 +1,7 @@
+footer {
+  padding: 2.5rem 0;
+  font-size: small;
+  a:not(:hover):not(:focus) {
+    color: $light;
+  }
+}

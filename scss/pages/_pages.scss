@@ -1,0 +1,21 @@
+@import './index';
+
+.page{
+  &-banner{
+    >.container{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    img{
+      width: 100%;
+    }
+  }
+
+  &-partner{
+    padding: 2.5rem 0 1.5rem;
+    &-item{
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+}

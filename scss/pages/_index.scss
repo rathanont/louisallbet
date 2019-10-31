@@ -1,0 +1,12 @@
+.menu-banner{
+  &-link{
+    display: block;
+    height: calc(100% - .75rem);
+    margin-bottom: 0.75rem;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

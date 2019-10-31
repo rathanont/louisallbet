@@ -1,0 +1,33 @@
+header{
+  background-color: black;
+  .fa-stack{
+    font-size: .75em;
+    color: #00c300;
+    i { vertical-align: middle; }
+  }
+  .navbar{
+    >.container{
+      @include media-breakpoint-up(lg){
+        flex-direction: column;
+      }
+    }
+    &-brand{
+      margin-right: 0;
+    }
+    &-toggler{
+      border-width: 0;
+      padding: 0.25rem;
+      &:focus{
+        outline-width: 0;
+      }
+      &[aria-expanded="false"]{
+        .navbar-toggler-icon{
+          background-image: url('../img/bar.svg') !important;
+        }
+      }
+      &-icon{
+        background-image: url('../img/bar.svg') !important;
+      }
+    }
+  }
+}
