@@ -6,3 +6,8 @@
 @import './footer';
 
 @import './pages/pages';
+
+html,
+body {
+    overflow-x: hidden;
+}
