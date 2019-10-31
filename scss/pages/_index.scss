@@ -1,12 +1,27 @@
-.menu-banner{
-  &-link{
-    display: block;
-    height: calc(100% - .75rem);
-    margin-bottom: 0.75rem;
-    img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+#indexPage {
+  .promotion {
+    &-link {
+      display: block;
+
+      img {
+        position: relative;
+        width: 100%;
+        height: calc(130px - .75rem);
+        margin-bottom: 0.75rem;
+        object-fit: cover;
+        object-position: left center;
+        border: 1px solid transparent;
+        @include transition($transition-base);
+
+        @include hover {
+          border-color: $primary;
+          @include transition($transition-base);
+        }
+
+        @include media-breakpoint-up(lg) {
+          height: calc(210px - .75rem);
+        }
+      }
     }
   }
 }

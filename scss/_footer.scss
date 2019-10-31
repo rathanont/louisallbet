@@ -1,7 +1,14 @@
 footer {
-  padding: 2.5rem 0;
+  padding: 4rem 0 6rem;
   font-size: small;
+
   a:not(:hover):not(:focus) {
     color: $light;
+  }
+
+  .footer {
+    &-logo {
+      max-width: 250px;
+    }
   }
 }

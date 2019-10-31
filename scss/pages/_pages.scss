@@ -1,21 +1,29 @@
 @import './index';
 
-.page{
-  &-banner{
-    >.container{
-      padding-left: 0;
-      padding-right: 0;
-    }
-    img{
+.page {
+  &-banner {
+    border-bottom: 1px solid $primary;
+
+    img {
       width: 100%;
     }
   }
 
-  &-partner{
-    padding: 2.5rem 0 1.5rem;
-    &-item{
+  &-partner {
+    padding: 4rem 0;
+
+    &-item {
+      display: block;
       max-width: 100%;
-      margin-bottom: 1rem;
+      max-height: 63px;
+      margin: 0 auto;
+      filter: grayscale(1);
+      @include transition($transition-base);
+
+      @include hover {
+        filter: grayscale(0);
+        @include transition($transition-base);
+      }
     }
   }
 }

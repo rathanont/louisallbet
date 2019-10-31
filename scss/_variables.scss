@@ -1,5 +1,6 @@
 // Colors
 $primary: #E4BA5A;
+$dark: #232323;
 
 // Body
 $body-bg: black;
@@ -7,3 +8,12 @@ $body-color: #f8f9fa;
 
 // Links
 $link-hover-decoration: none;
+
+// Typography
+$font-family-base: 'Playfair Display',
+serif;
+$font-promt: 'Prompt',
+sans-serif;
+
+// Navbar
+$navbar-dark-active-color: $primary;
