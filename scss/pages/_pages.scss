@@ -7,15 +7,16 @@
 
     img {
       width: 100%;
-      min-height: 260px;
+      min-height: 225px;
       object-fit: cover;
     }
   }
 
-  &-header{
+  &-header {
     margin-bottom: 30px;
     border-bottom: 1px solid $primary;
-    img{
+
+    img {
       width: 100%;
       min-height: 116px;
       object-fit: cover;

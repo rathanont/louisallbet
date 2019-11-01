@@ -1,24 +1,42 @@
 #indexPage {
   .promotion {
     &-link {
-      display: block;
+      padding: 0 5px;
       margin-bottom: 10px;
+
       img {
-        position: relative;
-        width: 100%;
         border: 1px solid transparent;
         @include transition($transition-base);
+      }
 
-        @include hover {
+      @include hover {
+        img {
           border-color: $primary;
           @include transition($transition-base);
         }
-
-        @include media-breakpoint-up(xl) {
-          height: 229px;
-          object-fit: cover;
-        }
       }
+
     }
+
+    // &-link {
+    //   display: block;
+    //   margin-bottom: 10px;
+    //   img {
+    //     position: relative;
+    //     width: 100%;
+    //     border: 1px solid transparent;
+    //     @include transition($transition-base);
+
+    //     @include hover {
+    //       border-color: $primary;
+    //       @include transition($transition-base);
+    //     }
+
+    //     @include media-breakpoint-up(xl) {
+    //       height: 229px;
+    //       object-fit: cover;
+    //     }
+    //   }
+    // }
   }
 }
