@@ -1,0 +1,50 @@
+#promotionPage {
+  .promotion {
+    &-item{
+      border-bottom: 1px solid #383838;
+      margin-bottom: 25px;
+      @include media-breakpoint-up(xl) {
+        padding-bottom: 1rem;
+      }
+    }
+    &-img {
+      width: 100%;
+      margin-bottom: 15px;
+
+      @include media-breakpoint-up(xl) {
+        max-width: 438px;
+      }
+    }
+
+    &-detail {
+      font-size: 0.75rem;
+      color: white;
+      .date {
+        color: #5E5E5E;
+      }
+      .title{
+        color: $primary;
+        font-size: 1.125rem;
+        font-weight: 600;
+      }
+      ul{
+        list-style: none;
+        padding-left: 0;
+        li{
+          position: relative;
+          display: flex;
+          &::before{
+            content: '-';
+            margin-right: .5rem;
+          }
+        }
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: .875rem;
+        .title{
+          font-size: 1.875rem;
+        }
+      }
+    }
+  }
+}
