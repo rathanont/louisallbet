@@ -2,14 +2,10 @@
   .promotion {
     &-link {
       display: block;
-
+      margin-bottom: 10px;
       img {
         position: relative;
         width: 100%;
-        height: calc(130px - .75rem);
-        margin-bottom: 0.75rem;
-        object-fit: cover;
-        object-position: left center;
         border: 1px solid transparent;
         @include transition($transition-base);
 
@@ -18,8 +14,9 @@
           @include transition($transition-base);
         }
 
-        @include media-breakpoint-up(lg) {
-          height: calc(210px - .75rem);
+        @include media-breakpoint-up(xl) {
+          height: 229px;
+          object-fit: cover;
         }
       }
     }

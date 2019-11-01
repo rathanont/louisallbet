@@ -1,6 +1,5 @@
 header {
   background-color: black;
-  font-family: $font-promt;
 
   .fa-stack {
     font-size: .75em;
@@ -12,11 +11,16 @@ header {
   }
 
   .header {
-    &-top {
-      padding: .5rem 0;
+    &-brand {
+      display: block;
+      text-align: center;
 
-      @include media-breakpoint-up(lg) {
-        padding: 1rem 0;
+      img {
+        max-width: 204px;
+
+        @include media-breakpoint-up(xl) {
+          max-width: 440px;
+        }
       }
     }
 
@@ -24,37 +28,42 @@ header {
       background-color: transparent;
       border-width: 0;
 
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xl) {
         display: none;
       }
     }
 
+    &-info {
+      min-width: 36px;
+    }
+
     &-text {
-      @include media-breakpoint-down(md) {
-        font-family: $font-family-base;
-        font-size: 0.5rem;
+      font-size: 0.875rem;
+      @include media-breakpoint-up(xl) {
+        width: 313px;
+        margin-bottom: 10px;
       }
     }
 
     &-at {
-      display: inline-block;
-      border: 1px solid $primary;
-      border-radius: $border-radius;
-      padding: .25rem .5rem;
-
-      @include media-breakpoint-down(md) {
-        font-size: 0.5rem;
-      }
-
-      img {
-        width: 1.25em;
-        height: 1.25em;
-        object-fit: contain;
-        vertical-align: middle;
+      @include media-breakpoint-up(xl) {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid $primary;
+        border-radius: $border-radius;
+        padding: .25rem .75rem;
+        font-size: 1.25rem;
+        img{
+          margin-right: 0.5rem;
+        }
       }
     }
 
     &-form {
+      @include media-breakpoint-up(xl) {
+        width: 313px;
+      }
+
       .form-control {
         padding-left: 2.5rem;
 
@@ -69,6 +78,11 @@ header {
 
       .btn {
         color: $body-bg;
+        font-weight: bold;
+
+        @include media-breakpoint-up(xl) {
+          min-width: 118px;
+        }
 
         &-submit {
           background: url('../img/bg-btn-submit.svg') repeat-x left top/auto 100%;
@@ -84,6 +98,7 @@ header {
   .navbar {
     padding-top: 0;
     padding-bottom: 0;
+  z-index: $zindex-sticky;
 
 
     >.container {
@@ -97,7 +112,7 @@ header {
         top: 15px;
         width: 100%;
         height: 100%;
-        background-color: darken($dark, 5%);
+        background-color: #191919;
         z-index: -1;
       }
 
@@ -131,6 +146,81 @@ header {
 
       &-icon {
         background-image: url('../img/bar.svg') !important;
+
+        &.icon-close {
+          background-image: url('../img/close.svg') !important;
+        }
+      }
+    }
+
+    &-collapse {
+      @include media-breakpoint-down(lg) {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        padding-right: 40px;
+        padding-left: 40px;
+        overflow-y: auto;
+        visibility: hidden;
+        background-color: rgba(black, .9);
+        transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+        transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+        transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+        z-index: $zindex-fixed;
+
+        &.open {
+          visibility: visible;
+          -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+        }
+
+        .header {
+          &-toggler {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+          }
+
+          &-form {
+            padding-bottom: 40px;
+            border-bottom: 1px solid #383838;
+          }
+        }
+      }
+
+      &-header {
+        margin-bottom: 40px;
+      }
+
+      &-logo {
+        display: block;
+        margin: 0 auto;
+        max-width: 204.85px;
+      }
+
+      .list-social {
+        list-style: none;
+        padding-top: 40px;
+        padding-left: 0;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: space-around;
+        font-size: 2.125rem;
+        border-top: 1px solid #383838;
+
+        a {
+          color: $navbar-dark-color;
+        }
+      }
+    }
+
+    &-nav {
+      padding: 35px 0;
+
+      @include media-breakpoint-up(xl) {
+        padding: 0;
       }
     }
   }
@@ -141,10 +231,10 @@ header {
       position: relative;
       background-color: rgba(black, .5);
 
-      &::after {
+      &::before {
         content: '';
         position: absolute;
-        bottom: -32px;
+        bottom: -33px;
         left: 0;
         right: 0;
         height: 100%;
@@ -154,9 +244,13 @@ header {
     }
 
     &-link {
-      font-size: 1.25rem;
+      font-size: 2.125rem;
+      padding-top: 0;
+      padding-bottom: 0;
+      overflow: hidden;
 
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(xl) {
+        font-size: 1.25rem;
         padding: 1rem 1.5rem !important;
       }
     }

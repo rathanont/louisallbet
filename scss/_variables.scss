@@ -10,10 +10,27 @@ $body-color: #f8f9fa;
 $link-hover-decoration: none;
 
 // Typography
-$font-family-base: 'Playfair Display',
-serif;
-$font-promt: 'Prompt',
+$font-family-base: 'Prompt',
 sans-serif;
+$font-playfair: 'Playfair Display',
+serif;
 
 // Navbar
 $navbar-dark-active-color: $primary;
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1320px
+);
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1260px
+);
