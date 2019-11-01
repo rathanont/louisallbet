@@ -1,7 +1,12 @@
 footer {
   padding: 4rem 0 6rem;
   font-family: $font-playfair;
+  font-size: 0.875rem;
   color: #878787;
+
+  @include media-breakpoint-up(xl){
+    font-size: 1rem;
+  }
 
   a:not(:hover):not(:focus) {
     color: #878787;
